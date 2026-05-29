@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Ascia",
+        "damage": "1d8",
+        "type": "melee",
+        "description": "Un'arma pesante e affilata, ideale per infliggere danni devastanti."
+    },
+    {
+        "name": "Spada",
+        "damage": "1d6",
+        "type": "melee",
+        "description": "Un'arma versatile, adatta sia per attacco che difesa."
+    },
+    {
+        "name": "Lancia",
+        "damage": "1d10",
+        "type": "melee",
+        "description": "Un'arma lunga che permette di colpire da distanza."
+    },
+    {
+        "name": "Arco",
+        "damage": "1d8",
+        "type": "ranged",
+        "description": "Un'arma a distanza che richiede abilità per essere usata efficacemente."
+    },
+    {
+        "name": "Balestra",
+        "damage": "1d10",
+        "type": "ranged",
+        "description": "Un'arma a distanza potente, capace di perforare armature."
+    },
+    {
+        "name": "Martello da guerra",
+        "damage": "1d12",
+        "type": "melee",
+        "description": "Un'arma pesante che infligge danni enormi con ogni colpo."
+    },
+    {
+        "name": "Pugnale",
+        "damage": "1d4",
+        "type": "melee",
+        "description": "Un'arma leggera e veloce, ideale per attacchi furtivi."
+    },
+    {
+        "name": "Scudo",
+        "damage": "0",
+        "type": "defensive",
+        "description": "Non infligge danni, ma offre protezione durante il combattimento."
+    }
+]

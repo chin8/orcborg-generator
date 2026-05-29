@@ -1,0 +1,13 @@
+{
+  "title": "Generatore di Orc",
+  "description": "Crea il tuo orco unico con questo generatore!",
+  "generateButton": "Genera Orc",
+  "nameLabel": "Nome dell'Orco",
+  "traitLabel": "Tratti",
+  "weaponLabel": "Arma",
+  "clanLabel": "Clan",
+  "backgroundLabel": "Sfondo",
+  "error": "Si è verificato un errore durante la generazione dell'orco.",
+  "success": "Orco generato con successo!",
+  "footer": "Generato con amore da [Il tuo nome]"
+}

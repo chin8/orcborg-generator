@@ -1,0 +1,42 @@
+[
+    {
+        "trait": "Forte",
+        "description": "Un orco con una forza straordinaria."
+    },
+    {
+        "trait": "Intelligente",
+        "description": "Un orco astuto e strategico."
+    },
+    {
+        "trait": "Agile",
+        "description": "Un orco veloce e scattante."
+    },
+    {
+        "trait": "Resistente",
+        "description": "Un orco che può sopportare grandi sofferenze."
+    },
+    {
+        "trait": "Carismatico",
+        "description": "Un orco che sa come attrarre e guidare gli altri."
+    },
+    {
+        "trait": "Feroce",
+        "description": "Un orco temuto per la sua ferocia in battaglia."
+    },
+    {
+        "trait": "Saggio",
+        "description": "Un orco che ha accumulato molta esperienza e conoscenza."
+    },
+    {
+        "trait": "Leale",
+        "description": "Un orco che è fedele ai suoi compagni e clan."
+    },
+    {
+        "trait": "Astuto",
+        "description": "Un orco che sa come ingannare e sorprendere gli avversari."
+    },
+    {
+        "trait": "Ribelle",
+        "description": "Un orco che sfida le autorità e le convenzioni."
+    }
+]

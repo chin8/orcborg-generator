@@ -1,0 +1,27 @@
+{
+  "name": "orc-generator",
+  "version": "1.0.0",
+  "description": "A generator for creating unique orc characters with various traits, weapons, and backgrounds.",
+  "main": "src/scripts/main.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step can be added here.'"
+  },
+  "keywords": [
+    "orc",
+    "generator",
+    "fantasy",
+    "characters"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://yourprojecthomepage.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/orc-generator.git"
+  }
+}

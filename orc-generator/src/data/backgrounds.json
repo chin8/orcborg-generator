@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "description": "Ex guerriero di un clan, ha combattuto in molte battaglie.",
+        "skills": ["Combattimento corpo a corpo", "Strategia"],
+        "history": "Dopo aver perso il suo clan, ha vagato per le terre in cerca di vendetta."
+    },
+    {
+        "id": 2,
+        "description": "Un ex cacciatore, esperto nell'arte della sopravvivenza.",
+        "skills": ["Caccia", "Trappole"],
+        "history": "Ha vissuto nella foresta per anni, imparando a conoscere ogni creatura."
+    },
+    {
+        "id": 3,
+        "description": "Un orco sciamano, in contatto con gli spiriti della natura.",
+        "skills": ["Magia", "Rituali"],
+        "history": "Ha ricevuto visioni che lo guidano nel suo cammino."
+    },
+    {
+        "id": 4,
+        "description": "Un mercenario, sempre in cerca di un buon affare.",
+        "skills": ["Negoziazione", "Inganno"],
+        "history": "Ha servito molti padroni, ma nessuno ha mai guadagnato la sua lealtà."
+    },
+    {
+        "id": 5,
+        "description": "Un orco artigiano, esperto nella lavorazione dei metalli.",
+        "skills": ["Fabbro", "Costruzione"],
+        "history": "Le sue armi sono ricercate in tutto il regno."
+    }
+]
