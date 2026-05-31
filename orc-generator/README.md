@@ -26,7 +26,6 @@ orc-generator
 │   │   ├── names.json      # Nomi degli orchi
 │   │   ├── traits.json     # Tratti degli orchi
 │   │   ├── weapons.json    # Armi degli orchi
-│   │   ├── clans.json      # Clan degli orchi
 │   │   └── backgrounds.json # Background degli orchi
 │   └── locales             # Cartella per le traduzioni
 │       └── it.json        # Traduzioni in italiano

@@ -68,3 +68,199 @@ button:hover {
         font-size: 1em;
     }
 }
+
+:root {
+    --bg-black: #0d0d0d;
+    --neon-yellow: #eaff00;
+    --hot-pink: #ff71ce; 
+    --text-white: #fcfcfc;
+    --text-white: #fcfcfc;
+    --border-metal: #555555;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px; /* Base per il ridimensionamento */
+    margin: 0;
+    padding: 20px;
+    background-image: repeating-linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%, #111), repeating-linear-gradient(45deg, #111 25%, var(--bg-black) 25%, var(--bg-black) 75%, #111 75%, #111);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    transition: font-size 0.2s ease;
+}
+
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 3px solid var(--neon-yellow);
+    box-shadow: 10px 10px 0px var(--hot-pink);
+    padding: 20px;
+}
+
+h1, h2, h3, .metal-title {
+    font-family: 'Metal Mania', cursive;
+    color: var(--neon-yellow);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px var(--hot-pink);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 2px dashed var(--hot-pink);
+    padding-bottom: 10px;
+}
+
+.class-selector {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.radio-label {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.5rem;
+    color: var(--text-white);
+    margin: 0 15px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.radio-label:hover {
+    color: var(--hot-pink);
+}
+
+button#generate-button {
+    display: block;
+    width: 100%;
+    background-color: var(--hot-pink);
+    color: var(--neon-yellow);
+    font-family: 'Metal Mania', cursive;
+    font-size: 2rem;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 5px 5px 0px var(--neon-yellow);
+    margin-bottom: 30px;
+}
+
+button#generate-button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+/* Stili per il riquadro dell'Orco in ui.js */
+.class-badge {
+    background-color: var(--neon-yellow);
+    color: var(--bg-black);
+    font-family: 'Metal Mania', cursive;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.vitals-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.vital {
+    flex: 1;
+    background-color: var(--hot-pink);
+    border: 2px solid var(--neon-yellow);
+    text-align: center;
+    padding: 10px;
+    color: var(--text-white);
+}
+
+.vital h3 {
+    text-shadow: none;
+    color: var(--neon-yellow);
+    margin-bottom: 5px;
+}
+
+.vital p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--bg-black);
+}
+
+.stats-box {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px dotted var(--border-metal);
+    border-bottom: 1px dotted var(--border-metal);
+    padding: 15px 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.stats-box strong {
+    color: var(--hot-pink);
+}
+
+.details p strong {
+    color: var(--neon-yellow);
+}
+
+.poteri-box {
+    border: 2px solid var(--neon-yellow);
+    background-color: rgba(255, 0, 124, 0.1);
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.poteri-box ul li {
+    margin-bottom: 5px;
+}
+
+.footer-note {
+    color: var(--hot-pink);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Nuovi stili per il font e il footer legale */
+.font-controls {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.font-controls button {
+    background-color: var(--bg-black);
+    color: var(--neon-yellow);
+    border: 2px solid var(--border-metal);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.font-controls button:hover {
+    border-color: var(--neon-yellow);
+    color: var(--hot-pink);
+}
+
+.legal-footer {
+    border-top: 1px dashed var(--border-metal);
+    margin-top: 40px;
+    padding-top: 20px;
+    color: #888;
+    font-size: 0.75em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.legal-footer strong {
+    color: var(--neon-yellow);
+}

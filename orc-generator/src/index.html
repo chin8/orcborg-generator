@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generatore di Orc</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-    <div id="app">
-        <h1>Generatore di Orc</h1>
-        <button id="generate-button">Genera Orc</button>
-        <div id="orc-details">
-            <h2>Dettagli Orc</h2>
-            <p id="orc-name"></p>
-            <p id="orc-trait"></p>
-            <p id="orc-weapon"></p>
-            <p id="orc-clan"></p>
-            <p id="orc-background"></p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generatore di Orc</title>
+        
+        <!-- Importazione Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <div id="app">
+            <!-- Controlli per il Font -->
+            <div class="font-controls">
+                <button id="font-decrease">A-</button>
+                <button id="font-increase">A+</button>
+            </div>
+    
+            <h1>ORCBORG GENERATORE</h1>
+            
+            <div class="class-selector">
+                <label class="radio-label">
+                    <input type="radio" name="classe-orco" value="orco" checked> ORCO
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="classe-orco" value="orcborg"> ORCBORG
+                </label>
+            </div>
+            
+            <button id="generate-button">GENERA LA BESTIA</button>
+            
+            <div id="orc-details">
+                <div style="text-align: center; opacity: 0.5;">In attesa di carne fresca...</div>
+            </div>
+            
+            <!-- Footer Legale -->
+            <footer class="legal-footer">
+                <p><strong>Orcborg</strong> è una produzione indipendente e non è affiliata a Ockult Örtmästare Games o Stockholm Kartell. È pubblicato sotto la MÖRK BORG Third Party License.</p>
+                <p>MÖRK BORG è copyright di Ockult Örtmästare Games e Stockholm Kartell. La versione italiana del gioco da tavolo è a cura di Mana Project Studio.</p>
+                <p>Web app di <strong>chin8</strong> per <strong>Botega Repezi</strong>.</p>
+            </footer>
         </div>
     </div>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/generator.js"></script>
-    <script src="scripts/ui.js"></script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
