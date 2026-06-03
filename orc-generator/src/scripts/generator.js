@@ -73,7 +73,7 @@ class OrcGenerator {
         ];
         const dio = this.getRandomElement(dei);
 
-        // 1. STATISTICHE BASE & MODIFICATORI
+        // STATISTICHE BASE & MODIFICATORI
         const stats = {
             presenza: this.rollStat(isOrcborg),
             agilita: this.rollStat(isOrcborg),
@@ -92,7 +92,7 @@ class OrcGenerator {
         const hpRaw = this.rollDice(8) + mods.costituzione;
         const hp = Math.max(1, hpRaw);
 
-        // 2. Tira Aspetto, Punti TEK e Miracoli
+        // Tira Aspetto, Punti TEK e Miracoli
         let aspetto1Index = this.rollDice(12) - 1;
         let aspetto2Index = this.rollDice(12) - 1;
         let trattiAspetto = [this.aspetto[aspetto1Index], this.aspetto[aspetto2Index]].map(tratto => {
@@ -111,7 +111,7 @@ class OrcGenerator {
         const tek = this.rollDice(6) + this.rollDice(6) + this.rollDice(6);
         const miracoli = this.rollDice(2);
 
-        // 3. INVENTARIO E POTERI
+        // INVENTARIO E POTERI
         const generiMusicali = ["Drum Bastard", "Thrash Yell", "Orcish Hymnal", "Pianohammer", "Industrial Noise", "Apocalypse Goth", "Goblin Skiffle", "Trashcannon"];
         const cartucce = ["Asteroid Jam", "Rokk Bastard", "Slugfuckers Inc", "Big Doktor Apokalypse", "Lil Skabba Razz", "Junk juNk JUnk", "Mogs Hulldecker", "Kickdoor One Hundred", "Dog Full-Auto", "[ T R A S H ] Sixty Six Seventy"];
         
@@ -194,7 +194,7 @@ class OrcGenerator {
             usiPoterigiorno = Math.max(1, mods.presenza + this.rollDice(4));
         }
 
-        // 4. ARMATURA & ARMA (basate su haPoteri)
+        // ARMATURA & ARMA (basate su haPoteri)
         let armaturaRoll = haPoteri ? (this.rollDice(2) - 1) : (this.rollDice(4) - 1);
         const armature = [
             "Nessuna (ma +1 al tuo attacco)",
@@ -231,7 +231,7 @@ class OrcGenerator {
             tratto.includes("Arma Innestata") ? `Arma Innestata: ${tabellaArmi[this.rollDice(6)]} (rimpiazza una mano)` : tratto
         );
 
-        // 5. Restituisce il personaggio completato
+        // Restituisce il personaggio completato
         return {
             isOrcborg: isOrcborg,
             name: name,

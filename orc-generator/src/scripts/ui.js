@@ -1,11 +1,8 @@
 export function renderOrc(orc) {
     const orcDetails = document.getElementById('orc-details');
     
-    // Costruiamo le stringhe per i dettagli (gestendo i formati degli oggetti)
-    const traitText = orc.trait.trait ? `${orc.trait.trait} - ${orc.trait.description}` : orc.trait;
-    // const weaponText = orc.weapon.name ? `${orc.weapon.name} (${orc.weapon.damage})` : orc.weapon;
+     const traitText = orc.trait.trait ? `${orc.trait.trait} - ${orc.trait.description}` : orc.trait;
     
-    // Usa le nuove proprietà origine e aspetto
     const origineText = orc.origine;
     const aspettoText = orc.aspetto ? orc.aspetto.join(' e ') : '';
 
@@ -39,26 +36,31 @@ export function renderOrc(orc) {
         <h2 class="orc-name" style="text-align: center; border-bottom: none; font-size: 2.5rem;">${orc.name || 'Senza Nome'}</h2>
         <p style="text-align: center; color: var(--border-metal); margin-top: -15px;">Devoto di <strong>${orc.dio}</strong></p>
         
+        <!-- PRIMA LE STATISTICHE (Grandi, box rosa) -->
         <div class="vitals-box">
             <div class="vital">
-                <h3>P. FERITA</h3>
-                <p>${orc.hp}</p>
+                <h3>FOR</h3>
+                <p>${formatMod(orc.mods.forza)}</p>
             </div>
             <div class="vital">
-                <h3>MIRACOLI</h3>
-                <p>${orc.miracoli}</p>
+                <h3>AGI</h3>
+                <p>${formatMod(orc.mods.agilita)}</p>
             </div>
             <div class="vital">
-                <h3>PUNTI TEK</h3>
-                <p>${orc.tek}</p>
+                <h3>PRE</h3>
+                <p>${formatMod(orc.mods.presenza)}</p>
+            </div>
+            <div class="vital">
+                <h3>COS</h3>
+                <p>${formatMod(orc.mods.costituzione)}</p>
             </div>
         </div>
 
+        <!-- DOPO I VITALS (Piccoli e in linea) -->
         <div class="stats-box">
-            <div><strong>FOR:</strong> ${formatMod(orc.mods.forza)}</div>
-            <div><strong>AGI:</strong> ${formatMod(orc.mods.agilita)}</div>
-            <div><strong>PRE:</strong> ${formatMod(orc.mods.presenza)}</div>
-            <div><strong>COS:</strong> ${formatMod(orc.mods.costituzione)}</div>
+            <div><strong>P. FERITA:</strong> ${orc.hp}</div>
+            <div><strong>MIRACOLI:</strong> ${orc.miracoli}</div>
+            <div><strong>TEK:</strong> ${orc.tek}</div>
         </div>
 
         <div class="details">
@@ -72,7 +74,7 @@ export function renderOrc(orc) {
         ${poteriHTML}
         
         <div class="poteri-box" style="border-color: var(--hot-pink);">
-            <h3 style="color: var(--hot-pink);">ROBA (INVENTARIO)</h3>
+            <h3 ">ROBA (INVENTARIO)</h3>
             <ul>
                 ${inventarioList}
             </ul>
@@ -86,7 +88,26 @@ export function renderOrc(orc) {
 
 export function setupEventListeners(generator) {
     const generateButton = document.getElementById('generate-button');
+    const soundFiles = [
+        'sounds/roar1.wav',
+        'sounds/roar2.wav',
+        'sounds/roar3.wav',
+        'sounds/roar4.wav'
+    ];
+
+    const orcSound = new Audio();
+    orcSound.volume = 0.7;
+
+
     generateButton.addEventListener('click', () => {
+        // Scegli un suono a caso dalla lista
+        const randomSound = soundFiles[Math.floor(Math.random() * soundFiles.length)];
+        
+        //  Carica il file scelto e suona
+        orcSound.src = randomSound;
+        orcSound.currentTime = 0;
+        orcSound.play().catch(e => console.log("Errore audio:", e));
+
         // Controlla quale classe è selezionata
         const classRadio = document.querySelector('input[name="classe-orco"]:checked');
         const isOrcborg = classRadio && classRadio.value === 'orcborg';
@@ -111,5 +132,15 @@ export function setupEventListeners(generator) {
             currentFontSize -= 2;
             bodyStyle.fontSize = `${currentFontSize}px`;
         }
+    });
+
+    // Theme Toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+    });
+
+    // Stampa PDF
+    document.getElementById('print-button').addEventListener('click', () => {
+        window.print();
     });
 }
